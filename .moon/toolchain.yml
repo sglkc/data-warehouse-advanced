@@ -24,11 +24,11 @@ node:
     version: '10.12.4'                     # The version of the package manager to use.
 
 # Configures Python within the toolchain.
-# python:
-#   version: '3.13'
-#   packageManager: uv
-#   uv:
-#     version: '0.5.29'
+python:
+  version: '3.13.1'
+  packageManager: uv
+  uv:
+    version: '0.8.3'
 
 # Configures Rust within the toolchain.
 # rust:

@@ -1,0 +1,16 @@
+# https://moonrepo.dev/docs/config/project
+$schema: "https://moonrepo.dev/schemas/project.json"
+
+type: application
+stack: backend
+language: python
+
+tasks:
+  dlt-run:
+      command: 'uv run --no-sync'
+      inputs:
+        - './*.py'
+      options:
+         envFile:
+            - '/data-pipeline/.env'
+         cache: false
