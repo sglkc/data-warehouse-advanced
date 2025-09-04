@@ -2,9 +2,10 @@
 
 # @see: https://docs.docker.com/compose/how-tos/multiple-compose-files/include/
 include:
-  - ./compose-mailpit.yaml
+  # - ./compose-mailpit.yaml
   - ./compose-instrumentation.yaml
   # - ./compose-valkey.yaml
+  - ./compose-metabase.yaml
 
 services:
   pgsql:
