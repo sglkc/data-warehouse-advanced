@@ -6,6 +6,7 @@ services:
     image: metabase/metabase:latest
     container_name: myorg_metabase
     hostname: metabase
+    restart: unless-stopped
     volumes:
       - /dev/urandom:/dev/random:ro
     ports:
@@ -30,6 +31,7 @@ services:
     image: postgres:latest
     container_name: myorg_metabase_postgres
     hostname: postgres
+    restart: unless-stopped
     environment:
       POSTGRES_USER: metabase
       POSTGRES_DB: metabaseappdb
