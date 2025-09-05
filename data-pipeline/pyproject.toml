@@ -6,7 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "dlt[clickhouse,postgres]>=1.15.0",
-    "sqlmesh[clickhouse]>=0.211.2",
+    "sqlmesh[clickhouse,postgres]>=0.211.2",
 ]
 
 [dependency-groups]
