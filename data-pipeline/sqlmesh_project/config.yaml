@@ -32,6 +32,10 @@ model_defaults:
   start: 2025-09-04 # Start date for backfill history
   cron: '@daily'    # Run models daily at 12am UTC (can override per model)
 
+# --- Variables ---
+variables:
+  var_timezone: 'Asia/Jakarta'
+
 # --- Linting Rules ---
 # Enforce standards for your team
 # https://sqlmesh.readthedocs.io/en/stable/guides/linter/
