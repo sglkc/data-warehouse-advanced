@@ -38,8 +38,8 @@ def load_csv(
     pipeline = dlt.pipeline(
         destination=postgres(credentials=pg_connection),
         # schema name in pgsql to insert into
-        dataset_name="master",
-        pipeline_name=f"load_{table}_master",
+        dataset_name="staging",
+        pipeline_name=f"load_{table}_staging",
     )
 
     info = pipeline.run(source.with_name(table))
