@@ -7,10 +7,10 @@ language: python
 
 tasks:
   dlt-run:
-      command: 'uv run --no-sync'
-      inputs:
-        - './*.py'
-      options:
-         envFile:
-            - '/data-pipeline/.env'
-         cache: false
+    command: 'uv run --no-sync'
+    inputs:
+      - './*.py'
+    options:
+        envFile:
+          - '/data-pipeline/.env'
+        cache: false

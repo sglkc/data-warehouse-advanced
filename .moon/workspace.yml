@@ -43,6 +43,7 @@ projects:
     - 'infra/*'
     - 'packages/*'
     - 'data-pipeline/dlt_project'
+    - 'data-pipeline/sqlmesh_project'
 
 # When enabled, will check for a newer moon version and send anonymous usage data to the
 # moonrepo team. This data is used to improve the quality and reliability of the tool.

@@ -1,0 +1,16 @@
+# https://moonrepo.dev/docs/config/project
+$schema: "https://moonrepo.dev/schemas/project.json"
+
+type: tool
+stack: infrastructure
+language: python
+
+tasks:
+  sqlmesh-plan:
+    command: 'uv run sqlmesh plan'
+    inputs:
+      - './models/**/*.sql'
+    options:
+      cache: false
+      envFile:
+        - '/data-pipeline/.env'
