@@ -4,7 +4,12 @@ import dlt
 from dlt.destinations import postgres
 from dlt.sources.filesystem import filesystem, read_csv
 
-pg_connection = os.environ.get("POSTGRES_CONNECTION_URL", "")
+pg_host = os.getenv("PG_HOST", "")
+pg_port = os.getenv("PG_PORT", "")
+pg_user = os.getenv("PG_USER", "")
+pg_password = os.getenv("PG_PASSWORD", "")
+pg_database = os.getenv("PG_DATABASE", "")
+pg_connection = f"postgresql://{pg_user}:{pg_password}@{pg_host}:{pg_port}/{pg_database}?sslmode=disable"
 
 sources = [
     { "file": "Customer", "table": "customers", "merge_key": "CustomerID" },
